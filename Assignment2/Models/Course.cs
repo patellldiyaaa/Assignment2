@@ -1,9 +1,9 @@
 ﻿namespace Assignment2.Models
 {
-    public class Couse
+    public class Course
     {
         public int CourseId { get; set; }
-        public string CourseName { get; set; }
+        public string CourseName { get; set; } = string.Empty;
         public int Credits { get; set; }
     }
 }

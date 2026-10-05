@@ -1,4 +1,10 @@
+using Assignment2.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<Assignment2Context>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("Assignment2Context")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Assignment2.Models.Course>
+
+@{
+    ViewData["Title"] = "Courses";
+}
+
+<h1>Courses</h1>
+
+<h7>Diya Patel</h7>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Course ID</th>
+            <th>Course Name</th>
+            <th>Credits</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var course in Model)
+        {
+            <tr>
+                <td>@course.CourseId</td>
+                <td>@course.CourseName</td>
+                <td>@course.Credits</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/">Back to Students</a>
